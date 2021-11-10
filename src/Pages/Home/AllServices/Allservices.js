@@ -16,7 +16,7 @@ const Allservices = ({ service }) => {
           <Card.Text>
             <h5><span class="dollar">$</span>{price}</h5>
           </Card.Text>
-          <button className="buy-btn" variant="">Buy Nou</button>
+          <button className="buy-btn" variant="">Buy Now</button>
         </Card.Body>
       </Card>
     </Col>

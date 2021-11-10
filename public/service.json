@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Diamondback Bicycle",
+        "price": 58,
+        "desc": "Diamondback bikes are generally good because they feature durable frames with massive load capacities and high-end components",
+        "img":"https://i.ibb.co/cDBrh9w/img-1.jpg"
+    },
+    {
+        "title": "Dual Sports",
+        "price": 55,
+        "desc": "Dual Sport is an adventure-loving hybrid bike that rides both and rides both well. From path to pavement and dirt to doubletrack",
+        "img":"https://i.ibb.co/zVypjtk/img2.jpg"
+    },
+    {
+        "title": "Cyclocross Disc Bike",
+        "price": 45,
+        "desc": "it's perfectly acceptable to ride your cyclocross bike as a road bike and just use a spare set of wheels with narrower road tires.",
+        "img":"https://i.ibb.co/9ND8BGs/img3.jpg"
+    },
+    {
+        "title": "Touring Disc Road Bike",
+        "price": 65,
+        "desc": "Touring bicycles make excellent commuter bikes because they are rugged, reliable, and are designed to carry panniers.",
+        "img":"https://i.ibb.co/YBcTm34/img4.jpg"
+    },
+    {
+        "title": "Haanjo Road Bike",
+        "price": 25,
+        "desc": "The Haanjo 8C represents the high end of Diamondback’s eight-model family of gravel bikes, each numbered in succession that starts",
+        "img":"https://i.ibb.co/FKQSkRC/img5.jpg"
+    },
+    {
+        "title": "Mountain Bike MTB ",
+        "price": 35,
+        "desc": "Mountain bicycle is a bicycle designed for off-road cycling. Mountain bikes share some similarities with other bicycles",
+        "img":"https://i.ibb.co/4d8wK6q/img6.jpg"
+    }
+]

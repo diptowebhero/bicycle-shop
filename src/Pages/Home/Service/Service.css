@@ -1,0 +1,13 @@
+.service-container{
+    background: #f2f2f2;
+    text-align: center;
+    padding:10px;
+}
+.service-title h5{
+    font-weight: 600;
+    color: #F63E7B;
+}
+.service-title h3{
+    font-size: 38px;
+    font-weight: 700;
+}

@@ -1,0 +1,24 @@
+.banner-text h2{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 48px;
+    color: #111430;
+}
+.banner-text p{
+    font-size: 17px;
+    color: #666666;
+    font-weight:400;
+}
+.banner-text .btn-banner{
+    background-color: #F63E7B;
+    width: 220px;
+    height: 50px;
+    color: #fff;
+    font-size:17px;
+}
+
+@media only screen and (max-width: 668px) {
+    .banner-text h2{
+        font-size: 34px;
+    }
+  }

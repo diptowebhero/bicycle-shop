@@ -1,0 +1,22 @@
+.buy-btn{
+    background: #F63E7B;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+    width: 120px;
+    height: 47px;
+    border: none;
+}
+.card-body h5, .dollar{
+    font-weight: 700;
+}
+.card-body p{
+    color: #666666;
+    font-size:16px;
+    font-weight:500;
+}
+.title{
+    color: #111430;
+    font-weight:600;
+    font-size: 20px;
+}

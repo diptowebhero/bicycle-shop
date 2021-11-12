@@ -10,7 +10,7 @@ const AllMoreService = ({ service }) => {
         <Card.Body className="card-body">
           <Card.Title className="title">{title}</Card.Title>
           <Card.Text>
-            <p className="m-0">{desc}</p>
+            <p className="m-0">{desc.split(' ').slice(0, 20).join(' ')}</p>
           </Card.Text>
           <Card.Text>
             <h5><span class="dollar">$</span>{price}</h5>

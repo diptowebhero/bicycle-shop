@@ -4,14 +4,14 @@ const ManageAllOrders = () => {
   const [orders, setOrders] = useState([]);
   const[control,setControl] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://enigmatic-plateau-73097.herokuapp.com/orders")
       .then((response) => response.json())
       .then((data) => setOrders(data));
   }, [control]);
   const deleteOrderAdmin = (id) => {
     const proceed = window.confirm("Are you sure? you want to delete");
     if (proceed) {
-      fetch(`http://localhost:5000/delete/${id}`, {
+      fetch(`https://enigmatic-plateau-73097.herokuapp.com/delete/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -25,7 +25,7 @@ const ManageAllOrders = () => {
   };
 
   const confirmOrder = (id) => {
-    fetch(`http://localhost:5000/confirm/${id}`,{
+    fetch(`https://enigmatic-plateau-73097.herokuapp.com/confirm/${id}`,{
         method: "PUT",
     })
     .then((res) => res.json())

@@ -16,7 +16,7 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link style={{paddingRight:'1.5rem'}} as={Link} to="/home">
+              <Nav.Link as={Link} to="/home">
                 Home
               </Nav.Link>
             </Nav>
@@ -27,7 +27,7 @@ const Navigation = () => {
                 </Nav.Link>
               ) : (
                 <>
-                  <Nav.Link style={{paddingRight:'1.5rem'}} as={Link} to="/Dashboard">
+                  <Nav.Link as={Link} to="/Dashboard">
                     Dashboard
                   </Nav.Link>
                   <NavDropdown
@@ -44,6 +44,9 @@ const Navigation = () => {
                     id="basic-nav-dropdown"
                   >
                     <NavDropdown.Item className="text-center">
+                      <p style={{ fontSize: "14px" }} className="m-0">
+                        {user.email}
+                      </p>
                       <Button onClick={logOut}>Log out</Button>
                     </NavDropdown.Item>
                   </NavDropdown>

@@ -9,7 +9,7 @@ const OrderList = () => {
   const { user } = Allcontext;
   const { email } = user;
   useEffect(() => {
-    fetch(`http://localhost:5000/orders/${email}`)
+    fetch(`https://enigmatic-plateau-73097.herokuapp.com/orders/${email}`)
       .then((response) => response.json())
       .then((data) => {
           console.log(data)

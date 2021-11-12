@@ -7,7 +7,7 @@ const SignleOrder = (props) => {
   const deleteOrder = (id) => {
     const proceed = window.confirm("Are you sure? you want to delete");
     if (proceed) {
-      fetch(`http://localhost:5000/delete/${id}`, {
+      fetch(`https://enigmatic-plateau-73097.herokuapp.com/delete/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

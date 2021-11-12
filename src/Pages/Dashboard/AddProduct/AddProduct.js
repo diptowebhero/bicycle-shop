@@ -2,10 +2,10 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
-const CustomerReview = () => {
+const AddProduct = () => {
   const { register, handleSubmit ,reset} = useForm();
   const onSubmit = (data) => {
-    fetch("https://enigmatic-plateau-73097.herokuapp.com/addReview", {
+    fetch("https://enigmatic-plateau-73097.herokuapp.com/addProduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -15,27 +15,20 @@ const CustomerReview = () => {
       .then((response) => response.json())
       .then((data) => {
         if(data.insertedId){
-          alert('Review Send Successfully!!');
-          reset();
-        }
+            alert('Product Add successfully!!')
+            reset()
+        };
       });
   };
-
   return (
     <Container className="mt-4">
       <div className="form-container">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <h2>Review</h2>
-          <input {...register("name")} placeholder="Your Name" />
-          <input
-            type="number"
-            {...register("rating")}
-            placeholder="Rating 1-5"
-          />
-          <input
-            {...register("desc")}
-            placeholder="Said Something About This Website"
-          />
+          <h2>Add New Order</h2>
+          <input {...register("title")} placeholder="Product-Name" />
+          <input {...register("price")} placeholder="Price" />
+          <input {...register("desc")} placeholder="Description" />
+          <input {...register("img")} placeholder="Img-Url" />
           <input type="submit" value="Add Now" />
         </form>
       </div>
@@ -43,4 +36,4 @@ const CustomerReview = () => {
   );
 };
 
-export default CustomerReview;
+export default AddProduct;

@@ -12,14 +12,14 @@ const BookOrder = () => {
   const { bookingId } = useParams();
   const [product, setProduct] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/order/${bookingId}`)
+    fetch(`https://enigmatic-plateau-73097.herokuapp.com/order/${bookingId}`)
       .then((response) => response.json())
       .then((data) => setProduct(data));
   }, [bookingId]);
   const onSubmit = (data) => {
     data.order = product;
     data.status = "pending";
-    fetch("http://localhost:5000/addOrders", {
+    fetch("https://enigmatic-plateau-73097.herokuapp.com/addOrders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

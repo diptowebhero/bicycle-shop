@@ -1,0 +1,20 @@
+.side-bar{
+    height: 100vh;
+}
+.side-bar ul li, a{
+    list-style: none;
+    font-size:18px;
+    color: black !important;
+    text-decoration: none;
+    font-weight: 500 !important;
+    margin-left: -16px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.side-bar-text ul{
+    margin-top: 30px;
+}
+.table-head{
+    background-color:#F5F6FA;
+    border: none;
+}

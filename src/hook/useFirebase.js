@@ -26,6 +26,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        setError('')
         const destination = location?.state?.from || "/";
         history.replace(destination);
       })
@@ -42,6 +43,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        setError('')
         const destination = location?.state?.from || "/";
         history.replace(destination);
       })
@@ -62,6 +64,7 @@ const useFirebase = () => {
           photoURL: photo,
         });
         setUser(user, newUser);
+        setError('')
         history.replace('/')
       })
       .catch((error) => {

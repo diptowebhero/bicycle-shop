@@ -8,7 +8,7 @@ const Login = () => {
   const history = useHistory();
   const location = useLocation();
   const { Allcontext } = useAuth();
-  const { sigInWithGoogle, loginUserEmailAndPassword, loading } = Allcontext;
+  const { sigInWithGoogle, loginUserEmailAndPassword, loading ,error} = Allcontext;
   const [registerData, setRegisterData] = useState({});
   const handleOnBlur = (e) => {
     const field = e.target.name;
@@ -50,6 +50,7 @@ const Login = () => {
               </a>
             </div>
             <span>or use your email for password</span>
+            <p className="m-0 text-danger fw-bold">{error}</p>
             <input
               name="email"
               type="email"

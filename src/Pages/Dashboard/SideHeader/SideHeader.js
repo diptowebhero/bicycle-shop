@@ -7,6 +7,7 @@ import CustomerReview from "../CustomerReview/CustomerReview";
 import Profile from "../Profile/Profile";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+import Payment from "../Payment/Payment";
 const SideHeader = () => {
   let { path, url } = useRouteMatch();
   return (
@@ -24,6 +25,9 @@ const SideHeader = () => {
                 </li>
                 <li>
                   <Link to={`${url}/review`}>Review</Link>
+                </li>
+                <li>
+                  <Link to={`${url}/payment`}>Payment</Link>
                 </li>
                 <li>
                   <Link to={`${url}/addAdmin`}>Make Admin</Link>
@@ -46,6 +50,9 @@ const SideHeader = () => {
               </Route>
               <Route path={`${path}/review`}>
                 <CustomerReview></CustomerReview>
+              </Route>
+              <Route path={`${path}/payment`}>
+                <Payment></Payment>
               </Route>
               <Route path={`${path}/profile`}>
                 <Profile></Profile>

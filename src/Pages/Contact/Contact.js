@@ -1,13 +1,15 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import './Contact.css'
+import "./Contact.css";
+import Fade from "react-reveal/Fade";
 const Contact = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
     <div>
-      <div id="contact" className="contact-section mt-5">
+      <Fade bottom duration={2500} distance="40px">
+        <div id="contact" className="contact-section mt-5">
           <Container>
             <div className="text-center">
               <h1>contact us</h1>
@@ -20,9 +22,9 @@ const Contact = () => {
                     <input
                       type="text"
                       {...register("name", { required: true })}
-                      required placeholder="Your name"
+                      required
+                      placeholder="Your name"
                     />
-                
                   </div>
                 </Col>
                 <Col md={6} sm={12}>
@@ -30,9 +32,9 @@ const Contact = () => {
                     <input
                       type="text"
                       {...register("email", { required: true })}
-                      required placeholder="Your email"
+                      required
+                      placeholder="Your email"
                     />
-                    
                   </div>
                 </Col>
                 <Col md={6} sm={12}>
@@ -40,16 +42,17 @@ const Contact = () => {
                     <input
                       type="text"
                       {...register("phone", { required: true })}
-                      required placeholder="phone"
+                      required
+                      placeholder="phone"
                     />
-                    
                   </div>
                 </Col>
                 <Col xs={12}>
                   <div className="styled-input wide">
                     <textarea
                       {...register("message", { required: true })}
-                      required placeholder="Send Message" 
+                      required
+                      placeholder="Send Message"
                     />
                   </div>
                 </Col>
@@ -61,7 +64,8 @@ const Contact = () => {
               </Row>
             </form>
           </Container>
-      </div>
+        </div>
+      </Fade>
     </div>
   );
 };

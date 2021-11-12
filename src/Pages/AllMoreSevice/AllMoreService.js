@@ -5,8 +5,8 @@ const AllMoreService = ({ service }) => {
   const{img,desc,title,price,_id} = service;
   return (
     <Col className="mt-4">
-      <Card style={{borderRadius:"20px",border:"none"}}>
-        <Card.Img style={{width:'100%',margin:'auto'}} variant="top" src={img} />
+      <Card style={{borderRadius:"20px",border:"none",}}>
+        <Card.Img style={{width:'75%',margin:'auto'}} variant="top" src={img} />
         <Card.Body className="card-body">
           <Card.Title className="title">{title}</Card.Title>
           <Card.Text>

@@ -1,0 +1,17 @@
+
+.testimonial-container{
+    background:#f0f8ff ;
+}
+.testimonial-title{
+    text-align: center;
+}
+.testimonial-title h4{
+    color: #F63E7B;
+    font-weight: bold;
+    font-size:20px;
+}
+.testimonial-title h3{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing:1px;
+}

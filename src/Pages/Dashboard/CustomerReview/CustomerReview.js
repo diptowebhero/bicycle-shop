@@ -1,10 +1,15 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import useAuth from "../../../hook/useAuth";
 
 const CustomerReview = () => {
-  const { register, handleSubmit ,reset} = useForm();
+  const { Allcontext } = useAuth();
+  const { user } = Allcontext;
+  const { photoURL } = user;
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
+    data.photoURL = photoURL;
     fetch("https://enigmatic-plateau-73097.herokuapp.com/addReview", {
       method: "POST",
       headers: {
@@ -14,9 +19,10 @@ const CustomerReview = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        if(data.insertedId){
-          alert('Review Send Successfully!!');
+        if (data.insertedId) {
+          alert("Review Send Successfully!!");
           reset();
+          window.location.reload()
         }
       });
   };

@@ -17,7 +17,7 @@ const Service = () => {
             <Spinner className="text-center" animation="grow" />
           </div>
         ) : (
-          <Row xs={1} md={3} className="w-100 mx-auto mb-3">
+          <Row xs={1} md={3} className="justify-content-center mx-auto">
             {services.slice(0, 6).map((service) => (
               <Allservices key={service._id} service={service}></Allservices>
             ))}

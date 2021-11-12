@@ -15,12 +15,10 @@ const Navigation = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
+            <Nav className="ms-auto align-items-center">
               <Nav.Link as={Link} to="/home">
                 Home
               </Nav.Link>
-            </Nav>
-            <Nav className="align-items-center">
               {!user.email ? (
                 <Nav.Link as={Link} to="/login">
                   Login
@@ -44,7 +42,7 @@ const Navigation = () => {
                     id="basic-nav-dropdown"
                   >
                     <NavDropdown.Item className="text-center">
-                      <p style={{ fontSize: "14px" }} className="m-0">
+                      <p style={{ fontSize: "12px" }} className="m-0">
                         {user.email}
                       </p>
                       <Button onClick={logOut}>Log out</Button>

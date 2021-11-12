@@ -9,8 +9,12 @@ import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import Payment from "../Payment/Payment";
 import AddProduct from "../AddProduct/AddProduct";
+import useAuth from "../../../hook/useAuth";
+import AdminRoute from "../../../PrivateRoute/AdminRoute";
 const SideHeader = () => {
   let { path, url } = useRouteMatch();
+  const { Allcontext } = useAuth();
+  const { admin } = Allcontext;
   return (
     <div>
       <Row className="w-100">
@@ -30,20 +34,27 @@ const SideHeader = () => {
                 <li>
                   <Link to={`${url}/payment`}>Payment</Link>
                 </li>
-                <li>
-                  <Link to={`${url}/addAdmin`}>Make Admin</Link>
-                </li>
-                <li>
-                  <Link to={`${url}/manageOrders`}>Manage All Orders</Link>
-                </li>
-                <li>
-                  <Link to={`${url}/addProduct`}>Add Product</Link>
-                </li>
+                {admin && (
+                  <>
+                    <li>
+                      <Link to={`${url}/addAdmin`}>Make Admin</Link>
+                    </li>
+                    <li>
+                      <Link to={`${url}/manageOrders`}>Manage All Orders</Link>
+                    </li>
+                    <li>
+                      <Link to={`${url}/addProduct`}>Add Product</Link>
+                    </li>
+                  </>
+                )}
               </ul>
             </div>
+            <Link to="/">
+            <button className="backHomeBtn">Back Home</button>
+          </Link>
           </div>
         </Col>
-        <Col style={{backgroundColor:"#E5E5E5"}} md={10} sm={12}>
+        <Col style={{ backgroundColor: "#E5E5E5" }} md={10} sm={12}>
           <div className="text-center">
             <Switch>
               <Route exact path={path}>
@@ -61,9 +72,9 @@ const SideHeader = () => {
               <Route path={`${path}/profile`}>
                 <Profile></Profile>
               </Route>
-              <Route path={`${path}/addAdmin`}>
+              <AdminRoute path={`${path}/addAdmin`}>
                 <MakeAdmin></MakeAdmin>
-              </Route>
+              </AdminRoute>
               <Route path={`${path}/manageOrders`}>
                 <ManageAllOrders></ManageAllOrders>
               </Route>

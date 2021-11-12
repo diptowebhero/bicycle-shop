@@ -1,5 +1,5 @@
 .side-bar{
-    height: 100vh;
+    height: 90vh;
 }
 .side-bar ul li, a{
     list-style: none;
@@ -16,4 +16,16 @@
 .table-head{
     background-color:#F5F6FA;
     border: none;
+}
+.backHomeBtn{
+    background-color: #F63E7B;
+    border: none;
+    margin-top:17rem;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    width: 130px;
+    height: 43px;
+    font-size:15px;
+    margin-left: 40px;
 }

@@ -15,6 +15,7 @@ firebaseInitialization();
 const useFirebase = () => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState({});
+  const [admin,setAdmin] = useState(false);
   const [error, setError] = useState("");
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
@@ -26,7 +27,8 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        setError('')
+        savedUserInfo(user.email, user.displayName, "PUT");
+        setError("");
         const destination = location?.state?.from || "/";
         history.replace(destination);
       })
@@ -43,7 +45,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        setError('')
+        setError("");
         const destination = location?.state?.from || "/";
         history.replace(destination);
       })
@@ -53,7 +55,7 @@ const useFirebase = () => {
       .finally(() => setLoading(false));
   };
   //register new user
-  const registerNewUser = (email, password, name, photo,history) => {
+  const registerNewUser = (email, password, name, photo, history) => {
     setLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
@@ -64,8 +66,9 @@ const useFirebase = () => {
           photoURL: photo,
         });
         setUser(user, newUser);
-        setError('')
-        history.replace('/')
+        savedUserInfo(email, name, "POST");
+        setError("");
+        history.replace("/");
       })
       .catch((error) => {
         setError(error.message);
@@ -98,7 +101,27 @@ const useFirebase = () => {
     });
     return () => unsubscribe;
   }, [auth]);
+
+  //saved user for admin
+  const savedUserInfo = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch("https://enigmatic-plateau-73097.herokuapp.com/users", {
+      method: method,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
+  };
+
+  useEffect(() => {
+    fetch(`https://enigmatic-plateau-73097.herokuapp.com/users/${user.email}`)
+    .then((response) => response.json())
+    .then((data) => setAdmin(data.admin))
+  },[user.email])
+
   return {
+    admin,
     sigInWithGoogle,
     user,
     error,

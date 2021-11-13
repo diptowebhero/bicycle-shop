@@ -11,7 +11,7 @@ const Navigation = () => {
       <Navbar expand="lg">
         <Container>
           <Navbar.Brand className="nav-logo" href="#home">
-            Supper Bicycle
+            Bicycle Shop
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

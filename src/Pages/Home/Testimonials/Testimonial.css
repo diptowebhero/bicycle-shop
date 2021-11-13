@@ -1,7 +1,4 @@
 
-.testimonial-container{
-    background:#f0f8ff ;
-}
 .testimonial-title{
     text-align: center;
 }
@@ -14,4 +11,7 @@
     font-size: 40px;
     font-weight: 700;
     letter-spacing:1px;
+}
+.fas{
+    color: #F63E7B;
 }

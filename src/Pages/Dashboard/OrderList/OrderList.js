@@ -12,13 +12,12 @@ const OrderList = () => {
     fetch(`https://enigmatic-plateau-73097.herokuapp.com/orders/${email}`)
       .then((response) => response.json())
       .then((data) => {
-          console.log(data)
           setOrder(data);
       });
   }, [email]);
   return (
     <div>
-        <Row xs={1} md={3}>
+        <Row xs={1} md={3} className="w-100 mx-auto">
               {order.map(singleOrder => <SignleOrder order={singleOrder}></SignleOrder>)}  
         </Row>
     </div>

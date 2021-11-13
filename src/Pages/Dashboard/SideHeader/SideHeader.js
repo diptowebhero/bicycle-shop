@@ -22,27 +22,38 @@ const SideHeader = () => {
           <div className="side-bar">
             <div className="side-bar-text">
               <ul>
-                <li>
-                  <Link to={`${url}/profile`}>Profile</Link>
-                </li>
-                <li>
-                  <Link to={`${url}/OrderList`}>Order List</Link>
-                </li>
-                <li>
-                  <Link to={`${url}/review`}>Review</Link>
-                </li>
-                <li>
-                  <Link to={`${url}/payment`}>Payment</Link>
-                </li>
+                {!admin && (
+                  <>
+                    <li>
+                      <i class="fas fa-user-alt"></i>
+                      <Link to={`${url}/profile`}>Profile</Link>
+                    </li>
+                    <li>
+                      <i class="fas fa-shopping-basket"></i>
+                      <Link to={`${url}/OrderList`}>Order List</Link>
+                    </li>
+                    <li>
+                      <i class="fas fa-comment-dots"></i>
+                      <Link to={`${url}/review`}>Review</Link>
+                    </li>
+                    <li>
+                      <i class="fas fa-money-bill-wave-alt"></i>
+                      <Link to={`${url}/payment`}>Payment</Link>
+                    </li>
+                  </>
+                )}
                 {admin && (
                   <>
                     <li>
+                      <i class="fas fa-user-plus"></i>
                       <Link to={`${url}/addAdmin`}>Make Admin</Link>
                     </li>
                     <li>
+                      <i class="fas fa-tasks"></i>
                       <Link to={`${url}/manageOrders`}>Manage All Orders</Link>
                     </li>
                     <li>
+                      <i class="fas fa-plus"></i>
                       <Link to={`${url}/addProduct`}>Add Product</Link>
                     </li>
                   </>
@@ -50,8 +61,8 @@ const SideHeader = () => {
               </ul>
             </div>
             <Link to="/">
-            <button className="backHomeBtn">Back Home</button>
-          </Link>
+              <button className="backHomeBtn">Back Home</button>
+            </Link>
           </div>
         </Col>
         <Col style={{ backgroundColor: "#E5E5E5" }} md={10} sm={12}>

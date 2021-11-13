@@ -1,6 +1,6 @@
 import React from "react";
 import useAuth from "../../../hook/useAuth";
-import "./Profile";
+import "./Profile.css";
 const Profile = () => {
   const { Allcontext } = useAuth();
   const { user } = Allcontext;

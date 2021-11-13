@@ -132,7 +132,7 @@ const Footer = () => {
           </Col>
         </Row>
         <hr/>
-        <p className="text-center">Copyright 2021 Travel Guru | Design By Dip</p>
+        <p className="text-center">Copyright 2021 Bicycle Shop | Design By Dip</p>
       </Container>
     </div>
     );

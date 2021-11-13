@@ -69,6 +69,7 @@ const useFirebase = () => {
         savedUserInfo(email, name, "POST");
         setError("");
         history.replace("/");
+        window.location.reload();
       })
       .catch((error) => {
         setError(error.message);

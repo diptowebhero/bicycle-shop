@@ -7,3 +7,10 @@ Nav a {
   font-size: 25px;
   font-weight: 700;
 }
+.drop-btn {
+  background-color: #f63e7b;
+  margin-top: 8px;
+  text-align: center;
+  padding: 5px 20px;
+  color: #fff;
+}

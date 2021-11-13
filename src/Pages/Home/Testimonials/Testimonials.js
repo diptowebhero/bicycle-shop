@@ -11,14 +11,14 @@ const Testimonials = () => {
       .then((data) => setTestimonials(data));
   }, []);
   return (
-    <div className="testimonial-container p-4">
+    <div className="testimonial-container mt-5 p-4">
       <Container>
         <div className="testimonial-title">
           <h4>Our Customer Say</h4>
           <h3>Testimonial</h3>
         </div>
 
-        <Row xs={1} md={3} className="justify-content-center mx-auto">
+        <Row xs={1} md={3} className="mx-auto">
           {testimonials.map(testimonial=><Testimonial key={testimonial._id} testimonial={testimonial}></Testimonial>)}
         </Row>
       </Container>

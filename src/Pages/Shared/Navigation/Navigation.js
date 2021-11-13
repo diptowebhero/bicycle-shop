@@ -45,7 +45,7 @@ const Navigation = () => {
                       <p style={{ fontSize: "12px" }} className="m-0">
                         {user.email}
                       </p>
-                      <Button onClick={logOut}>Log out</Button>
+                      <Button variant="" className="drop-btn" onClick={logOut}>Log out</Button>
                     </NavDropdown.Item>
                   </NavDropdown>
                 </>
